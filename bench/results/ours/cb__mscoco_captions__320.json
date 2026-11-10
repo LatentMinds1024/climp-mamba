@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.3257896900177002,
+ "text_retrieval_recall@1": 0.42980000376701355,
+ "image_retrieval_recall@5": 0.6442223191261292,
+ "text_retrieval_recall@5": 0.746999979019165,
+ "image_retrieval_recall@10": 0.77764892578125,
+ "text_retrieval_recall@10": 0.8537999987602234,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "cb",
+ "dataset": "mscoco_captions",
+ "res": 320,
+ "seconds": 29.6
+}

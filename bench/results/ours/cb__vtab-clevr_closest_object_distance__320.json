@@ -1,0 +1,10 @@
+{
+ "acc1": 0.17926666666666666,
+ "acc5": 0.8791333333333333,
+ "mean_per_class_recall": 0.1867631408644899,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "cb",
+ "dataset": "vtab/clevr_closest_object_distance",
+ "res": 320,
+ "seconds": 69.3
+}

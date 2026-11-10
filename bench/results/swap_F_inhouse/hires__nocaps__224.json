@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.17224444448947906,
+ "text_retrieval_recall@1": 0.23888888955116272,
+ "image_retrieval_recall@5": 0.41664445400238037,
+ "text_retrieval_recall@5": 0.5371111035346985,
+ "image_retrieval_recall@10": 0.5505555272102356,
+ "text_retrieval_recall@10": 0.6635555624961853,
+ "model": "swap {'vis': 'paper', 'txt': 'inhouse', 'train_vis': 0, 'train_txt': 0, 'embed_dim': 512}",
+ "task": "hires",
+ "dataset": "nocaps",
+ "res": 224,
+ "seconds": 22.3
+}

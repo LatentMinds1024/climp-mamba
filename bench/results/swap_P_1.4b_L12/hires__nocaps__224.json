@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.2928444445133209,
+ "text_retrieval_recall@1": 0.4228888750076294,
+ "image_retrieval_recall@5": 0.6092222332954407,
+ "text_retrieval_recall@5": 0.7224444150924683,
+ "image_retrieval_recall@10": 0.7393555641174316,
+ "text_retrieval_recall@10": 0.8308888673782349,
+ "model": "swap {'vis': 'paper', 'txt': 'hf:ckpt/hf/mamba-1.4b-hf', 'train_vis': 0, 'train_txt': 12, 'embed_dim': 512}",
+ "task": "hires",
+ "dataset": "nocaps",
+ "res": 224,
+ "seconds": 112.9
+}

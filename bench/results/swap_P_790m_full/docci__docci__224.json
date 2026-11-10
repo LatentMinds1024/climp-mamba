@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.2526000142097473,
+ "text_retrieval_recall@1": 0.2892000079154968,
+ "image_retrieval_recall@5": 0.5347999930381775,
+ "text_retrieval_recall@5": 0.5690000057220459,
+ "image_retrieval_recall@10": 0.6597999930381775,
+ "text_retrieval_recall@10": 0.699400007724762,
+ "model": "swap {'vis': 'paper', 'txt': 'hf:ckpt/hf/mamba-790m-hf', 'train_vis': 0, 'train_txt': -1, 'embed_dim': 512}",
+ "task": "docci",
+ "dataset": "docci",
+ "res": 224,
+ "seconds": 53.8
+}

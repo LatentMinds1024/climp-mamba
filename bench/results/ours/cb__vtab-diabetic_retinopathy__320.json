@@ -1,0 +1,10 @@
+{
+ "acc1": 0.06280759315678462,
+ "acc5": 1.0,
+ "mean_per_class_recall": 0.15528721151736172,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "cb",
+ "dataset": "vtab/diabetic_retinopathy",
+ "res": 320,
+ "seconds": 197.4
+}

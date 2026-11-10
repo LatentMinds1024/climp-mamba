@@ -1,0 +1,969 @@
+{
+ "vision": [
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 64,
+   "params_m": 87.5328,
+   "gflops": 1.2537077760000002,
+   "latency_ms_fp32": 10.669112205505371,
+   "peak_mem_mb_fp32": 40.4072265625,
+   "energy_j_per_item_fp32": 1.5388666666666666,
+   "wall_s_fp32": 0.32055020332336426,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 3094.7135808162325,
+    "energy_j_per_item": 0.10482020547945206
+   },
+   "latency_ms_bf16": 11.970281600952148,
+   "peak_mem_mb_bf16": 21.5546875,
+   "energy_j_per_item_bf16": 1.1954666666666667,
+   "wall_s_bf16": 0.3592343330383301,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 4672.993802659982,
+    "energy_j_per_item": 0.06732194602272727
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 64,
+   "params_m": 85.660416,
+   "gflops": 1.460285184,
+   "latency_ms_fp32": 1.8734931945800781,
+   "peak_mem_mb_fp32": 3.20361328125,
+   "energy_j_per_item_fp32": 0.0,
+   "wall_s_fp32": 0.05643296241760254,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 16527.241472725033,
+    "energy_j_per_item": 0.01929896907216495
+   },
+   "latency_ms_bf16": 2.1387338638305664,
+   "peak_mem_mb_bf16": 170.12841796875,
+   "energy_j_per_item_bf16": 0.6243,
+   "wall_s_bf16": 0.06447076797485352,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 27668.053597196453,
+    "energy_j_per_item": 0.010775836709104938
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 64,
+   "params_m": 85.660416,
+   "gflops": 1.4549583359999998,
+   "latency_ms_fp32": 1.4241933822631836,
+   "peak_mem_mb_fp32": 3.20361328125,
+   "energy_j_per_item_fp32": 0.40226666666666666,
+   "wall_s_fp32": 0.04288053512573242,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 17096.710782752692,
+    "energy_j_per_item": 0.018377607409713573
+   },
+   "latency_ms_bf16": 1.590132713317871,
+   "peak_mem_mb_bf16": 169.62841796875,
+   "energy_j_per_item_bf16": 0.6918666666666666,
+   "wall_s_bf16": 0.047933101654052734,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 31213.42511627907,
+    "energy_j_per_item": 0.010570894565960356
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 128,
+   "params_m": 87.5328,
+   "gflops": 5.014831104000001,
+   "latency_ms_fp32": 10.379433631896973,
+   "peak_mem_mb_fp32": 38.87548828125,
+   "energy_j_per_item_fp32": 1.6640000000000001,
+   "wall_s_fp32": 0.3114645481109619,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 1667.6324238357934,
+    "energy_j_per_item": 0.1962231012658228
+   },
+   "latency_ms_bf16": 11.747598648071289,
+   "peak_mem_mb_bf16": 24.21484375,
+   "energy_j_per_item_bf16": 1.2531333333333334,
+   "wall_s_bf16": 0.3526458740234375,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 2253.1661532521384,
+    "energy_j_per_item": 0.1483073408018868
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 128,
+   "params_m": 85.69728,
+   "gflops": 5.642616576,
+   "latency_ms_fp32": 1.8733739852905273,
+   "peak_mem_mb_fp32": 4.375,
+   "energy_j_per_item_fp32": 0.4439,
+   "wall_s_fp32": 0.056288719177246094,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 4930.7590970040965,
+    "energy_j_per_item": 0.06655212823275862
+   },
+   "latency_ms_bf16": 2.178192138671875,
+   "peak_mem_mb_bf16": 174.62890625,
+   "energy_j_per_item_bf16": 0.0,
+   "wall_s_bf16": 0.0655665397644043,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 8667.03654914116,
+    "energy_j_per_item": 0.039263667076167075
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 128,
+   "params_m": 85.69728,
+   "gflops": 5.564741376000001,
+   "latency_ms_fp32": 1.3904571533203125,
+   "peak_mem_mb_fp32": 4.375,
+   "energy_j_per_item_fp32": 0.0,
+   "wall_s_fp32": 0.042012929916381836,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 5111.352520588375,
+    "energy_j_per_item": 0.0643705078125
+   },
+   "latency_ms_bf16": 1.6013383865356445,
+   "peak_mem_mb_bf16": 174.62890625,
+   "energy_j_per_item_bf16": 0.8726333333333333,
+   "wall_s_bf16": 0.04829239845275879,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 9845.784037558686,
+    "energy_j_per_item": 0.03357298430735931
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 224,
+   "params_m": 87.5328,
+   "gflops": 15.357920256,
+   "latency_ms_fp32": 10.143876075744629,
+   "peak_mem_mb_fp32": 59.3017578125,
+   "energy_j_per_item_fp32": 1.474,
+   "wall_s_fp32": 0.3053877353668213,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 505.41156889418164,
+    "energy_j_per_item": 0.657091796875
+   },
+   "latency_ms_bf16": 12.068510055541992,
+   "peak_mem_mb_bf16": 52.6865234375,
+   "energy_j_per_item_bf16": 1.4155333333333333,
+   "wall_s_bf16": 0.36240148544311523,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 783.5838563346897,
+    "energy_j_per_item": 0.4240831925675676
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 224,
+   "params_m": 85.798656,
+   "gflops": 17.581972224,
+   "latency_ms_fp32": 1.8552541732788086,
+   "peak_mem_mb_fp32": 8.1474609375,
+   "energy_j_per_item_fp32": 0.5602666666666667,
+   "wall_s_fp32": 0.055828094482421875,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 1277.4337442567094,
+    "energy_j_per_item": 0.25621875
+   },
+   "latency_ms_bf16": 2.1855831146240234,
+   "peak_mem_mb_bf16": 176.7822265625,
+   "energy_j_per_item_bf16": 0.0,
+   "wall_s_bf16": 0.0657956600189209,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 1857.3570477182227,
+    "energy_j_per_item": 0.17684765624999998
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 224,
+   "params_m": 85.798656,
+   "gflops": 16.866644736,
+   "latency_ms_fp32": 1.4477968215942383,
+   "peak_mem_mb_fp32": 7.5,
+   "energy_j_per_item_fp32": 0.0,
+   "wall_s_fp32": 0.04355025291442871,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 1496.9966762586719,
+    "energy_j_per_item": 0.2308644366197183
+   },
+   "latency_ms_bf16": 1.6117095947265625,
+   "peak_mem_mb_bf16": 175.22998046875,
+   "energy_j_per_item_bf16": 0.0,
+   "wall_s_bf16": 0.048426151275634766,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 2875.1494794567498,
+    "energy_j_per_item": 0.12099861111111113
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 256,
+   "params_m": 87.5328,
+   "gflops": 20.059324416000003,
+   "latency_ms_fp32": 10.00368595123291,
+   "peak_mem_mb_fp32": 71.53515625,
+   "energy_j_per_item_fp32": 1.5147000000000002,
+   "wall_s_fp32": 0.3005948066711426,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 338.36224305544613,
+    "energy_j_per_item": 0.9755458984375
+   },
+   "latency_ms_bf16": 12.092113494873047,
+   "peak_mem_mb_bf16": 60.58203125,
+   "energy_j_per_item_bf16": 1.9308666666666667,
+   "wall_s_bf16": 0.36322569847106934,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 593.6683504215284,
+    "energy_j_per_item": 0.5583024553571428
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 256,
+   "params_m": 85.844736,
+   "gflops": 23.221288704,
+   "latency_ms_fp32": 1.847982406616211,
+   "peak_mem_mb_fp32": 13.267578125,
+   "energy_j_per_item_fp32": 0.0,
+   "wall_s_fp32": 0.0556182861328125,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 896.9045377241548,
+    "energy_j_per_item": 0.37542841569767443
+   },
+   "latency_ms_bf16": 2.1696090698242188,
+   "peak_mem_mb_bf16": 184.60595703125,
+   "energy_j_per_item_bf16": 0.6885333333333333,
+   "wall_s_bf16": 0.06539511680603027,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 1257.9570551572237,
+    "energy_j_per_item": 0.2618209745762712
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 256,
+   "params_m": 85.844736,
+   "gflops": 22.003873536,
+   "latency_ms_fp32": 1.707315444946289,
+   "peak_mem_mb_fp32": 11.76171875,
+   "energy_j_per_item_fp32": 0.0,
+   "wall_s_fp32": 0.05128836631774902,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 1116.3228425044913,
+    "energy_j_per_item": 0.3072258254716981
+   },
+   "latency_ms_bf16": 1.641988754272461,
+   "peak_mem_mb_bf16": 177.85888671875,
+   "energy_j_per_item_bf16": 0.0,
+   "wall_s_bf16": 0.04950070381164551,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 2240.509606877556,
+    "energy_j_per_item": 0.15619017857142856
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 384,
+   "params_m": 87.5328,
+   "gflops": 45.133479936,
+   "latency_ms_fp32": 10.03420352935791,
+   "peak_mem_mb_fp32": 164.73046875,
+   "energy_j_per_item_fp32": 2.314633333333333,
+   "wall_s_fp32": 0.30132174491882324,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 102.76606962515247,
+    "energy_j_per_item": 3.2363890625000002
+   },
+   "latency_ms_bf16": 11.409640312194824,
+   "peak_mem_mb_bf16": 123.02734375,
+   "energy_j_per_item_bf16": 2.380533333333333,
+   "wall_s_bf16": 0.3426823616027832,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 237.82542163252143,
+    "energy_j_per_item": 1.4752044270833335
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 384,
+   "params_m": 86.090496,
+   "gflops": 55.538974464000006,
+   "latency_ms_fp32": 2.6456117630004883,
+   "peak_mem_mb_fp32": 44.4375,
+   "energy_j_per_item_fp32": 0.5974333333333333,
+   "wall_s_fp32": 0.0784306526184082,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 299.3953280867998,
+    "energy_j_per_item": 1.1044437500000002
+   },
+   "latency_ms_bf16": 2.165675163269043,
+   "peak_mem_mb_bf16": 222.77734375,
+   "energy_j_per_item_bf16": 0.8751333333333334,
+   "wall_s_bf16": 0.06532549858093262,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 343.02264238223574,
+    "energy_j_per_item": 0.9242077205882353
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 384,
+   "params_m": 86.090496,
+   "gflops": 49.402427136,
+   "latency_ms_fp32": 2.5943517684936523,
+   "peak_mem_mb_fp32": 22.2109375,
+   "energy_j_per_item_fp32": 0.5125666666666667,
+   "wall_s_fp32": 0.07834410667419434,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 407.2479590985292,
+    "energy_j_per_item": 0.8455265624999999
+   },
+   "latency_ms_bf16": 1.6412734985351562,
+   "peak_mem_mb_bf16": 188.9990234375,
+   "energy_j_per_item_bf16": 0.0,
+   "wall_s_bf16": 0.049399614334106445,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 879.0628148890428,
+    "energy_j_per_item": 0.3780450148809524
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 512,
+   "params_m": 87.5328,
+   "gflops": 80.23729766400001,
+   "latency_ms_fp32": 9.763479232788086,
+   "peak_mem_mb_fp32": 287.12890625,
+   "energy_j_per_item_fp32": 3.1511,
+   "wall_s_fp32": 0.29285359382629395,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 32,
+    "items_per_s": 82.76142975842342,
+    "energy_j_per_item": 3.9963749999999996
+   },
+   "latency_ms_bf16": 11.96146011352539,
+   "peak_mem_mb_bf16": 202.30078125,
+   "energy_j_per_item_bf16": 2.2613,
+   "wall_s_bf16": 0.36008477210998535,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 32,
+    "items_per_s": 137.66612681047562,
+    "energy_j_per_item": 2.451829326923077
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 512,
+   "params_m": 86.43456,
+   "gflops": 107.125522176,
+   "latency_ms_fp32": 7.698416709899902,
+   "peak_mem_mb_fp32": 121.197265625,
+   "energy_j_per_item_fp32": 3.033733333333333,
+   "wall_s_fp32": 0.2301790714263916,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 32,
+    "items_per_s": 113.6155864735739,
+    "energy_j_per_item": 2.9129886363636364
+   },
+   "latency_ms_bf16": 5.840301513671875,
+   "peak_mem_mb_bf16": 310.83740234375,
+   "energy_j_per_item_bf16": 2.0877666666666665,
+   "wall_s_bf16": 0.17556214332580566,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 32,
+    "items_per_s": 121.51096215460635,
+    "energy_j_per_item": 2.7871223958333338
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 512,
+   "params_m": 86.43456,
+   "gflops": 87.760402176,
+   "latency_ms_fp32": 5.4656267166137695,
+   "peak_mem_mb_fp32": 44.0234375,
+   "energy_j_per_item_fp32": 1.3108666666666666,
+   "wall_s_fp32": 0.16147708892822266,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 32,
+    "items_per_s": 192.20722414674557,
+    "energy_j_per_item": 1.833608552631579
+   },
+   "latency_ms_bf16": 2.3336410522460938,
+   "peak_mem_mb_bf16": 213.86767578125,
+   "energy_j_per_item_bf16": 0.9563333333333334,
+   "wall_s_bf16": 0.07088136672973633,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 32,
+    "items_per_s": 483.4253400999139,
+    "energy_j_per_item": 0.7100142663043478
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 768,
+   "params_m": 87.5328,
+   "gflops": 180.533919744,
+   "latency_ms_fp32": 20.100951194763184,
+   "peak_mem_mb_fp32": 644.16015625,
+   "energy_j_per_item_fp32": 6.787366666666667,
+   "wall_s_fp32": 0.6028881072998047,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 16,
+    "items_per_s": 36.189732101930474,
+    "energy_j_per_item": 9.20478125
+   },
+   "latency_ms_bf16": 15.496492385864258,
+   "peak_mem_mb_bf16": 436.83203125,
+   "energy_j_per_item_bf16": 5.497233333333333,
+   "wall_s_bf16": 0.46457743644714355,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 16,
+    "items_per_s": 59.65706960687095,
+    "energy_j_per_item": 5.831260416666667
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 768,
+   "params_m": 87.4176,
+   "gflops": 295.284293376,
+   "latency_ms_fp32": 31.347990036010742,
+   "peak_mem_mb_fp32": 535.267578125,
+   "energy_j_per_item_fp32": 10.020866666666667,
+   "wall_s_fp32": 0.9405694007873535,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 16,
+    "items_per_s": 30.785944379761215,
+    "energy_j_per_item": 10.57256875
+   },
+   "latency_ms_bf16": 32.82320499420166,
+   "peak_mem_mb_bf16": 820.7001953125,
+   "energy_j_per_item_bf16": 10.616333333333333,
+   "wall_s_bf16": 0.9847218990325928,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 16,
+    "items_per_s": 29.997071760638,
+    "energy_j_per_item": 10.80791875
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 768,
+   "params_m": 87.4176,
+   "gflops": 197.354616576,
+   "latency_ms_fp32": 16.86394214630127,
+   "peak_mem_mb_fp32": 89.76171875,
+   "energy_j_per_item_fp32": 5.548466666666667,
+   "wall_s_fp32": 0.5049259662628174,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 16,
+    "items_per_s": 58.25755989492453,
+    "energy_j_per_item": 5.957721590909091
+   },
+   "latency_ms_bf16": 4.762172698974609,
+   "peak_mem_mb_bf16": 236.60595703125,
+   "energy_j_per_item_bf16": 2.0008666666666666,
+   "wall_s_bf16": 0.14238262176513672,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 16,
+    "items_per_s": 186.84064959616012,
+    "energy_j_per_item": 1.8702767857142857
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 896,
+   "params_m": 87.5328,
+   "gflops": 245.726724096,
+   "latency_ms_fp32": 27.804851531982422,
+   "peak_mem_mb_fp32": 881.60546875,
+   "energy_j_per_item_fp32": 10.103100000000001,
+   "wall_s_fp32": 0.8344564437866211,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 8,
+    "items_per_s": 26.780536354066154,
+    "energy_j_per_item": 12.584193181818183
+   },
+   "latency_ms_bf16": 19.006848335266113,
+   "peak_mem_mb_bf16": 595.26171875,
+   "energy_j_per_item_bf16": 6.697533333333333,
+   "wall_s_bf16": 0.5699577331542969,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 8,
+    "items_per_s": 45.348668303778375,
+    "energy_j_per_item": 7.407694444444445
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 896,
+   "params_m": 88.056576,
+   "gflops": 449.975910144,
+   "latency_ms_fp32": 53.45654487609863,
+   "peak_mem_mb_fp32": 965.708984375,
+   "energy_j_per_item_fp32": 17.729499999999998,
+   "wall_s_fp32": 1.6041057109832764,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 8,
+    "items_per_s": 18.408448444088087,
+    "energy_j_per_item": 18.307499999999997
+   },
+   "latency_ms_bf16": 57.89756774902344,
+   "peak_mem_mb_bf16": 1348.88916015625,
+   "energy_j_per_item_bf16": 17.815966666666668,
+   "wall_s_bf16": 1.736856460571289,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 8,
+    "items_per_s": 17.440105697509487,
+    "energy_j_per_item": 18.533525
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 896,
+   "params_m": 88.056576,
+   "gflops": 268.590855936,
+   "latency_ms_fp32": 28.494715690612793,
+   "peak_mem_mb_fp32": 119.47265625,
+   "energy_j_per_item_fp32": 10.031733333333333,
+   "wall_s_fp32": 0.8555488586425781,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 8,
+    "items_per_s": 35.90341278121071,
+    "energy_j_per_item": 9.679767857142858
+   },
+   "latency_ms_bf16": 7.390260696411133,
+   "peak_mem_mb_bf16": 254.86767578125,
+   "energy_j_per_item_bf16": 2.098,
+   "wall_s_bf16": 0.2202143669128418,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 8,
+    "items_per_s": 134.7351108255702,
+    "energy_j_per_item": 2.5656274509803922
+   }
+  },
+  {
+   "tower": "VMamba-B (CLIMP)",
+   "res": 1024,
+   "params_m": 87.5328,
+   "gflops": 320.94919065600004,
+   "latency_ms_fp32": 37.39440441131592,
+   "peak_mem_mb_fp32": 1144.50390625,
+   "energy_j_per_item_fp32": 12.296066666666666,
+   "wall_s_fp32": 1.1213417053222656,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 8,
+    "items_per_s": 20.324022062128176,
+    "energy_j_per_item": 16.4028625
+   },
+   "latency_ms_bf16": 23.937106132507324,
+   "peak_mem_mb_bf16": 768.86328125,
+   "energy_j_per_item_bf16": 7.717233333333334,
+   "wall_s_bf16": 0.7175655364990234,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 8,
+    "items_per_s": 34.115772927753255,
+    "energy_j_per_item": 10.114384615384616
+   }
+  },
+  {
+   "tower": "ViT-B/16 naive-attn",
+   "res": 1024,
+   "params_m": 88.793856,
+   "gflops": 660.175175424,
+   "latency_ms_fp32": 86.52794361114502,
+   "peak_mem_mb_fp32": 1620.7685546875,
+   "energy_j_per_item_fp32": 29.231166666666663,
+   "wall_s_fp32": 2.5950381755828857,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 8,
+    "items_per_s": 11.395262166783548,
+    "energy_j_per_item": 27.8015625
+   },
+   "latency_ms_bf16": 95.6186056137085,
+   "peak_mem_mb_bf16": 2162.169921875,
+   "energy_j_per_item_bf16": 29.968700000000002,
+   "wall_s_bf16": 2.8683948516845703,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 8,
+    "items_per_s": 10.424469008698699,
+    "energy_j_per_item": 30.0426375
+   }
+  },
+  {
+   "tower": "ViT-B/16 SDPA",
+   "res": 1024,
+   "params_m": 88.793856,
+   "gflops": 350.786516736,
+   "latency_ms_fp32": 40.7487154006958,
+   "peak_mem_mb_fp32": 156.03515625,
+   "energy_j_per_item_fp32": 13.950933333333333,
+   "wall_s_fp32": 1.2293169498443604,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 8,
+    "items_per_s": 23.148442981291215,
+    "energy_j_per_item": 15.2921625
+   },
+   "latency_ms_bf16": 9.519815444946289,
+   "peak_mem_mb_bf16": 281.61474609375,
+   "energy_j_per_item_bf16": 2.280066666666667,
+   "wall_s_bf16": 0.28246188163757324,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 8,
+    "items_per_s": 93.0627667747402,
+    "energy_j_per_item": 3.7396964285714285
+   }
+  }
+ ],
+ "text": [
+  {
+   "tower": "in-house Mamba-1 99M (ours)",
+   "tokens": 16,
+   "params_m": 98.962176,
+   "gflops_est": 1.931108352,
+   "latency_ms_fp32": 5.566716194152832,
+   "peak_mem_mb_fp32": 244.3291015625,
+   "energy_j_per_item_fp32": 0.8368,
+   "wall_s_fp32": 0.16729164123535156,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 6340.370971361087,
+    "energy_j_per_item": 0.054566747063758386
+   },
+   "latency_ms_bf16": 6.226301193237305,
+   "peak_mem_mb_bf16": 248.7822265625,
+   "energy_j_per_item_bf16": 0.7695333333333333,
+   "wall_s_bf16": 0.18665170669555664,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 6749.357739112944,
+    "energy_j_per_item": 0.051165220820189275
+   }
+  },
+  {
+   "tower": "in-house Mamba-1 99M (ours)",
+   "tokens": 77,
+   "params_m": 98.962176,
+   "gflops_est": 9.293458944,
+   "latency_ms_fp32": 5.626916885375977,
+   "peak_mem_mb_fp32": 3.92529296875,
+   "energy_j_per_item_fp32": 0.8806999999999999,
+   "wall_s_fp32": 0.16916489601135254,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 3175.3605640133906,
+    "energy_j_per_item": 0.1107504222972973
+   },
+   "latency_ms_bf16": 6.478786468505859,
+   "peak_mem_mb_bf16": 76.95458984375,
+   "energy_j_per_item_bf16": 0.8105,
+   "wall_s_bf16": 0.19445109367370605,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 3997.549605361132,
+    "energy_j_per_item": 0.08735995989304812
+   }
+  },
+  {
+   "tower": "in-house Mamba-1 99M (ours)",
+   "tokens": 142,
+   "params_m": 98.962176,
+   "gflops_est": 17.138586624,
+   "latency_ms_fp32": 5.571722984313965,
+   "peak_mem_mb_fp32": 7.0859375,
+   "energy_j_per_item_fp32": 1.2270333333333334,
+   "wall_s_fp32": 0.16725873947143555,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 1766.534101976888,
+    "energy_j_per_item": 0.19727428463855423
+   },
+   "latency_ms_bf16": 6.427407264709473,
+   "peak_mem_mb_bf16": 78.6826171875,
+   "energy_j_per_item_bf16": 0.8301,
+   "wall_s_bf16": 0.1933293342590332,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 2403.806323933698,
+    "energy_j_per_item": 0.14926382743362834
+   }
+  },
+  {
+   "tower": "in-house Mamba-1 99M (ours)",
+   "tokens": 256,
+   "params_m": 98.962176,
+   "gflops_est": 30.897733632,
+   "latency_ms_fp32": 5.633234977722168,
+   "peak_mem_mb_fp32": 13.892578125,
+   "energy_j_per_item_fp32": 0.9950666666666667,
+   "wall_s_fp32": 0.16924524307250977,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 1269.9699628379417,
+    "energy_j_per_item": 0.28271822916666667
+   },
+   "latency_ms_bf16": 6.389379501342773,
+   "peak_mem_mb_bf16": 81.712890625,
+   "energy_j_per_item_bf16": 1.0371333333333335,
+   "wall_s_bf16": 0.19199085235595703,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 2313.181462523482,
+    "energy_j_per_item": 0.14940567660550458
+   }
+  },
+  {
+   "tower": "in-house Mamba-1 99M (ours)",
+   "tokens": 512,
+   "params_m": 98.962176,
+   "gflops_est": 61.795467264,
+   "latency_ms_fp32": 5.539178848266602,
+   "peak_mem_mb_fp32": 29.50390625,
+   "energy_j_per_item_fp32": 1.3215000000000001,
+   "wall_s_fp32": 0.16624212265014648,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 640.1165983870429,
+    "energy_j_per_item": 0.5455651041666666
+   },
+   "latency_ms_bf16": 6.4765214920043945,
+   "peak_mem_mb_bf16": 90.51953125,
+   "energy_j_per_item_bf16": 0.91,
+   "wall_s_bf16": 0.19452524185180664,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 1129.241799985697,
+    "energy_j_per_item": 0.3199787735849056
+   }
+  },
+  {
+   "tower": "Mamba-1 1.4B (paper)",
+   "tokens": 16,
+   "params_m": 1372.178432,
+   "gflops_est": 40.614559744,
+   "latency_ms_fp32": 16.52085781097412,
+   "peak_mem_mb_fp32": 244.6416015625,
+   "energy_j_per_item_fp32": 3.2788666666666666,
+   "wall_s_fp32": 0.495985746383667,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 684.027010911389,
+    "energy_j_per_item": 0.5012736742424243
+   },
+   "latency_ms_bf16": 18.612265586853027,
+   "peak_mem_mb_bf16": 1556.13134765625,
+   "energy_j_per_item_bf16": 3.3487666666666667,
+   "wall_s_bf16": 0.5583975315093994,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 773.5513130480639,
+    "energy_j_per_item": 0.4559966216216216
+   }
+  },
+  {
+   "tower": "Mamba-1 1.4B (paper)",
+   "tokens": 77,
+   "params_m": 1372.178432,
+   "gflops_est": 195.457568768,
+   "latency_ms_fp32": 16.368985176086426,
+   "peak_mem_mb_fp32": 10.62060546875,
+   "energy_j_per_item_fp32": 4.011933333333333,
+   "wall_s_fp32": 0.491225004196167,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 239.36995875783043,
+    "energy_j_per_item": 1.4585130208333332
+   },
+   "latency_ms_bf16": 18.666744232177734,
+   "peak_mem_mb_bf16": 1560.49072265625,
+   "energy_j_per_item_bf16": 3.9327666666666667,
+   "wall_s_bf16": 0.5602226257324219,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 382.4433477324276,
+    "energy_j_per_item": 0.9081874999999999
+   }
+  },
+  {
+   "tower": "Mamba-1 1.4B (paper)",
+   "tokens": 142,
+   "params_m": 1372.178432,
+   "gflops_est": 360.454217728,
+   "latency_ms_fp32": 16.506314277648926,
+   "peak_mem_mb_fp32": 19.10595703125,
+   "energy_j_per_item_fp32": 4.899033333333334,
+   "wall_s_fp32": 0.49543046951293945,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 137.8613341303994,
+    "energy_j_per_item": 2.567065625
+   },
+   "latency_ms_bf16": 18.71776580810547,
+   "peak_mem_mb_bf16": 1566.2568359375,
+   "energy_j_per_item_bf16": 4.512833333333333,
+   "wall_s_bf16": 0.5615231990814209,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 225.26953329881448,
+    "energy_j_per_item": 1.5896534090909091
+   }
+  },
+  {
+   "tower": "Mamba-1 1.4B (paper)",
+   "tokens": 256,
+   "params_m": 1372.178432,
+   "gflops_est": 649.832955904,
+   "latency_ms_fp32": 16.574501991271973,
+   "peak_mem_mb_fp32": 32.939453125,
+   "energy_j_per_item_fp32": 4.8875,
+   "wall_s_fp32": 0.49915528297424316,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 90.74798920363268,
+    "energy_j_per_item": 3.8817250000000003
+   },
+   "latency_ms_bf16": 18.78046989440918,
+   "peak_mem_mb_bf16": 1573.095703125,
+   "energy_j_per_item_bf16": 4.331566666666666,
+   "wall_s_bf16": 0.5640530586242676,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 183.725442030952,
+    "energy_j_per_item": 1.9110156249999999
+   }
+  },
+  {
+   "tower": "Mamba-1 1.4B (paper)",
+   "tokens": 512,
+   "params_m": 1372.178432,
+   "gflops_est": 1299.665911808,
+   "latency_ms_fp32": 21.492362022399902,
+   "peak_mem_mb_fp32": 65.12890625,
+   "energy_j_per_item_fp32": 8.125066666666667,
+   "wall_s_fp32": 0.6435785293579102,
+   "iters_fp32": 30,
+   "throughput_fp32": {
+    "batch": 64,
+    "items_per_s": 45.922379190398225,
+    "energy_j_per_item": 7.6409593749999996
+   },
+   "latency_ms_bf16": 18.94545555114746,
+   "peak_mem_mb_bf16": 1591.19140625,
+   "energy_j_per_item_bf16": 5.532933333333333,
+   "wall_s_bf16": 0.5686609745025635,
+   "iters_bf16": 30,
+   "throughput_bf16": {
+    "batch": 64,
+    "items_per_s": 95.46622225968291,
+    "energy_j_per_item": 3.7112843750000004
+   }
+  }
+ ],
+ "gpu": "NVIDIA L40S"
+}

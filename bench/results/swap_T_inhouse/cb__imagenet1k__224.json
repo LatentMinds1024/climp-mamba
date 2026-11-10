@@ -1,0 +1,10 @@
+{
+ "acc1": 0.1412,
+ "acc5": 0.3171,
+ "mean_per_class_recall": 0.14128,
+ "model": "swap {'vis': 'paper', 'txt': 'inhouse', 'train_vis': 0, 'train_txt': -1, 'embed_dim': 512}",
+ "task": "cb",
+ "dataset": "imagenet1k",
+ "res": 224,
+ "seconds": 82.9
+}

@@ -1,0 +1,42 @@
+{
+ "paper": [
+  {
+   "file": "c9c7f104cc4e0d0e.jpg",
+   "caption": "A large porch with a wooden fence and no roof.",
+   "score": 0.5494899749755859,
+   "paper_score": 0.545
+  },
+  {
+   "file": "dd5669c3169e107a.jpg",
+   "caption": "A woman with red hair hugging a man.",
+   "score": 0.6332919597625732,
+   "paper_score": 0.628
+  },
+  {
+   "file": "e19707cbf772cd20.jpg",
+   "caption": "A hand holding a glass that has some wine in it.",
+   "score": 0.6507881879806519,
+   "paper_score": 0.646
+  }
+ ],
+ "ours": [
+  {
+   "file": "c9c7f104cc4e0d0e.jpg",
+   "caption": "A large porch with a wooden fence and no roof.",
+   "score": 0.670121967792511,
+   "paper_score": 0.545
+  },
+  {
+   "file": "dd5669c3169e107a.jpg",
+   "caption": "A woman with red hair hugging a man.",
+   "score": 0.5611032247543335,
+   "paper_score": 0.628
+  },
+  {
+   "file": "e19707cbf772cd20.jpg",
+   "caption": "A hand holding a glass that has some wine in it.",
+   "score": 0.7398402094841003,
+   "paper_score": 0.646
+  }
+ ]
+}

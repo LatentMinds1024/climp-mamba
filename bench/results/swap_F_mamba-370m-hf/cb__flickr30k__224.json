@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.2606000006198883,
+ "text_retrieval_recall@1": 0.3400000035762787,
+ "image_retrieval_recall@5": 0.5406000018119812,
+ "text_retrieval_recall@5": 0.6309999823570251,
+ "image_retrieval_recall@10": 0.6606000065803528,
+ "text_retrieval_recall@10": 0.7480000257492065,
+ "model": "swap {'vis': 'paper', 'txt': 'hf:ckpt/hf/mamba-370m-hf', 'train_vis': 0, 'train_txt': 0, 'embed_dim': 512}",
+ "task": "cb",
+ "dataset": "flickr30k",
+ "res": 224,
+ "seconds": 6.9
+}

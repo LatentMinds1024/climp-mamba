@@ -1,0 +1,16 @@
+{
+ "alignment": 0.9102871417999268,
+ "uniformity_image": -3.4049267768859863,
+ "uniformity_text": -3.5021402835845947,
+ "hubness_image": 1.7639397382736206,
+ "hubness_text": 3.3500418663024902,
+ "n_images": 4500,
+ "n_texts": 45000,
+ "k": 10,
+ "t": 2.0,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "geometry",
+ "dataset": "nocaps",
+ "res": 224,
+ "seconds": 24.1
+}

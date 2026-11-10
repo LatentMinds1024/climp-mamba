@@ -1,0 +1,10 @@
+{
+ "acc1": 0.009000900090009001,
+ "acc5": 0.062106210621062106,
+ "mean_per_class_recall": 0.009010695187165775,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "cb",
+ "dataset": "fgvc_aircraft",
+ "res": 224,
+ "seconds": 8.9
+}

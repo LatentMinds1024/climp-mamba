@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.3425999879837036,
+ "text_retrieval_recall@1": 0.4569999873638153,
+ "image_retrieval_recall@5": 0.6363999843597412,
+ "text_retrieval_recall@5": 0.7329999804496765,
+ "image_retrieval_recall@10": 0.7498000264167786,
+ "text_retrieval_recall@10": 0.8450000286102295,
+ "model": "swap {'vis': 'inet', 'txt': 'paper', 'train_vis': -1, 'train_txt': 0, 'embed_dim': 512}",
+ "task": "cb",
+ "dataset": "flickr30k",
+ "res": 224,
+ "seconds": 15.0
+}

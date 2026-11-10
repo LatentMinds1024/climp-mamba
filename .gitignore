@@ -1,0 +1,24 @@
+# environments
+venv/
+venv_dl/
+__pycache__/
+*.pyc
+*.bak
+
+# large artefacts (data, weights, runs, logs)
+data/
+ckpt/
+runs/
+logs/
+*.pt
+*.pth
+*.safetensors
+*.tar
+*.zip
+*.sqlite*
+
+# third-party code fetched separately (see README)
+work/
+
+# copyrighted paper text / scratch
+paper/

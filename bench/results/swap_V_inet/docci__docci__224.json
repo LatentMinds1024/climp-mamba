@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.2558000087738037,
+ "text_retrieval_recall@1": 0.26339998841285706,
+ "image_retrieval_recall@5": 0.5281999707221985,
+ "text_retrieval_recall@5": 0.5360000133514404,
+ "image_retrieval_recall@10": 0.6412000060081482,
+ "text_retrieval_recall@10": 0.6478000283241272,
+ "model": "swap {'vis': 'inet', 'txt': 'paper', 'train_vis': -1, 'train_txt': 0, 'embed_dim': 512}",
+ "task": "docci",
+ "dataset": "docci",
+ "res": 224,
+ "seconds": 77.2
+}

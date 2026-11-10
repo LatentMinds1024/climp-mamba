@@ -1,0 +1,10 @@
+{
+ "acc1": 0.7881276709401709,
+ "acc5": 0.9686164529914529,
+ "mean_per_class_recall": 0.8240155267590188,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "cb",
+ "dataset": "voc2007",
+ "res": 320,
+ "seconds": 69.3
+}

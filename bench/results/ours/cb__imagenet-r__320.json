@@ -1,0 +1,10 @@
+{
+ "acc1": 0.0997,
+ "acc5": 0.22123333333333334,
+ "mean_per_class_recall": 0.09813380745370842,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "cb",
+ "dataset": "imagenet-r",
+ "res": 320,
+ "seconds": 140.7
+}

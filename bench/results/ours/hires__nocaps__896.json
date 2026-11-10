@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.16548888385295868,
+ "text_retrieval_recall@1": 0.17888888716697693,
+ "image_retrieval_recall@5": 0.4061777889728546,
+ "text_retrieval_recall@5": 0.38555556535720825,
+ "image_retrieval_recall@10": 0.5383999943733215,
+ "text_retrieval_recall@10": 0.5068888664245605,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "hires",
+ "dataset": "nocaps",
+ "res": 896,
+ "seconds": 176.0
+}

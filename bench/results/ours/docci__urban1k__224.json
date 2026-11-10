@@ -1,0 +1,13 @@
+{
+ "image_retrieval_recall@1": 0.34200000762939453,
+ "text_retrieval_recall@1": 0.34299999475479126,
+ "image_retrieval_recall@5": 0.6349999904632568,
+ "text_retrieval_recall@5": 0.5960000157356262,
+ "image_retrieval_recall@10": 0.7369999885559082,
+ "text_retrieval_recall@10": 0.7129999995231628,
+ "model": "CLIMP-ours (VMamba-B + in-house Mamba-1 99M, COCO ft)",
+ "task": "docci",
+ "dataset": "urban1k",
+ "res": 224,
+ "seconds": 17.4
+}

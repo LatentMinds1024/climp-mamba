@@ -1,0 +1,245 @@
+%-------------------------------------------------------------
+% CLIMP results: update of 11 Nov 2026 (standalone, compiles on its own)
+% Contents:
+%   1. Completed tables from the previous report (Tables 3, 4, 7)
+%   2. Tower-swap ablation (Table 13)
+%   3. Staged unfreezing (Table 14)
+%   4. CC12M training: pilots and full-run status (Tables 15, 16)
+%
+% "CLIMP pt"  = released CLIMP-paper checkpoint (VMamba-B + Mamba-1 1.4B, CC12M)
+% "CLIMP ours" = VMamba-B + in-house Mamba-1 99M, fine-tuned on COCO train2017
+%-------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[font=small,labelfont=bf]{caption}
+
+\newcommand{\tbd}{\textcolor{gray}{\ldots}}
+\newcommand{\np}{\textit{n/p}}
+\newcommand{\TI}{T$\rightarrow$I}
+\newcommand{\IT}{I$\rightarrow$T}
+
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{5pt}
+
+\title{CLIMP: Results Update}
+\author{}
+\date{11 November 2026}
+
+\begin{document}
+\maketitle
+
+%=============================================================
+\section{Completed tables from the previous report}
+%=============================================================
+The previous report left some cells as ``\ldots''. The results already existed; they are filled in below.
+
+\setcounter{table}{2}
+
+% ---------- Table 3: ImageNet-1k by resolution ----------
+\begin{table}[!htbp]
+\centering
+\caption{ImageNet-1k zero-shot, Acc@1 / Acc@5, by input resolution. The 320 px values come from the CLIP-Benchmark run (fp16 autocast); every other value is FP32. \textbf{Updated:} CLIMP ours at 320 px now has Acc@5.}
+\label{tab:imagenet-res}
+\begin{tabular}{lccccc}
+\toprule
+Model & 128 & 224 & 320 & 384 & 512 \\
+\midrule
+CLIP (paper)         & --            & 36.0 / 64.9   & --            & --            & --            \\
+CLIMP pt (paper)     & --            & 44.0 / 74.8   & --            & --            & --            \\
+CLIMP pt (our eval)  & 40.16 / 69.74 & 43.81 / 74.67 & 42.78 / 74.24 & 41.24 / 73.07 & 37.62 / 69.57 \\
+CLIMP ours           & 14.68 / 29.53 & 15.32 / 30.97 & 14.33 / 30.00 & 13.76 / 29.30 & 12.85 / 28.33 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------- Table 4: zero-shot classification at 224 ----------
+\begin{table}[!htbp]
+\centering
+\caption{Zero-shot classification at 224 px, Acc@1 / Acc@5. \textbf{Updated:} the CLIMP ours column is now complete. CLIP (paper) values for FER2013 and SVHN were not available.}
+\label{tab:zeroshot}
+\begin{tabular}{lcccc}
+\toprule
+Dataset & CLIP (paper) & CLIMP pt (paper) & CLIMP pt (our eval) & CLIMP ours \\
+\midrule
+ImageNet-1k     & 36.0 / 64.9 & 44.0 / 74.8 & 43.81 / 74.67 & 15.32 / 30.97 \\
+ImageNet-V2     & 30.0 / 57.5 & 37.5 / 68.4 & 37.5 / 68.2   & 12.8 / 27.6   \\
+ImageNet-R      & 42.9 / 69.7 & 46.6 / 74.5 & 46.9 / 74.7   & 11.3 / 23.7   \\
+ImageNet-A      & 13.9 / 37.6 & 15.6 / 45.3 & 15.2 / 44.6   & 5.6 / 17.5    \\
+ImageNet-O      & 27.7 / 55.8 & 49.8 / 78.8 & 49.5 / 78.3   & 19.1 / 40.5   \\
+ImageNet-Sketch & 21.7 / 46.1 & 27.5 / 54.4 & 27.6 / 54.5   & 5.9 / 14.1    \\
+ObjectNet       & 23.6 / 46.7 & 28.1 / 54.3 & 27.6 / --     & 15.8 / 35.7   \\
+SUN397          & 53.2 / 86.7 & 48.2 / 84.2 & 47.9 / 84.0   & 26.9 / 54.6   \\
+VOC2007         & 77.9 / 96.7 & 75.8 / 96.2 & 76.3 / 96.2   & 79.1 / 97.5   \\
+CIFAR-10        & 94.2 / 99.9 & 83.0 / 99.4 & 85.9 / 99.6   & 82.5 / 99.3   \\
+CIFAR-100       & 66.3 / 91.4 & 48.3 / 81.1 & 50.9 / 83.4   & 30.1 / 54.3   \\
+Cars            & 8.9 / 30.4  & 9.1 / 32.4  & 8.6 / 32.3    & 1.3 / 6.0     \\
+FER2013         & --          & 18.8 / --   & 21.3 / --     & 15.8 / 72.7   \\
+SVHN            & --          & 9.9 / --    & 10.0 / --     & 8.4 / 45.2    \\
+\midrule
+Mean of 25 datasets & 27.3 / 56.4 & 29.6 / 58.5 & 28.16 / 58.56 & 16.48 / 44.40 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\setcounter{table}{6}
+
+% ---------- Table 7: VRAM ----------
+\begin{table}[!htbp]
+\centering
+\caption{Image-tower VRAM (MB), corrected measurement (re-runs 7367/7368). Each cell is \emph{peak total} (including the loaded model) / \emph{activation only} (peak minus memory allocated before the forward pass). Batch 64 up to 256 px, 32 at 512 px, 8 at 1024 px. The 64 px FP32 activation figure ($\approx$560 MB for both models) includes one-off cuBLAS/cuDNN workspace allocated on the first call. \textbf{Updated:} replaces the previous table, whose 64--256 px readings for CLIMP pt were contaminated by leftover INT8/INT4 copies.}
+\label{tab:vram}
+\begin{tabular}{rcccc}
+\toprule
+ & \multicolumn{2}{c}{CLIMP pt (1,462M params)} & \multicolumn{2}{c}{CLIMP ours (189M params)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Res & FP32 & BF16 & FP32 & BF16 \\
+\midrule
+64   & 6,143 / 558   & 5,610 / 24  & 1,289 / 559   & 900 / 168   \\
+128  & 5,659 / 73    & 5,613 / 26  & 805 / 73      & 901 / 169   \\
+224  & 5,642 / 56    & 5,638 / 52  & 785 / 53      & 924 / 193   \\
+256  & 5,658 / 72    & 5,648 / 62  & 800 / 68      & 934 / 202   \\
+512  & 5,872 / 286   & 5,789 / 203 & 1,002 / 270   & 1,062 / 330 \\
+1024 & 6,731 / 1,145 & 6,355 / 768 & 1,812 / 1,081 & 1,580 / 848 \\
+\midrule
+\multicolumn{3}{l}{CLIP (paper) @896, activation only}  & \multicolumn{2}{c}{50.4} \\
+\multicolumn{3}{l}{CLIMP (paper) @896, activation only} & \multicolumn{2}{c}{10.0} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+%=============================================================
+\section{Tower-swap ablation}
+%=============================================================
+Question: is the in-house 99M text tower good or bad, and does a larger text tower help?
+Every run keeps the same image tower and training recipe, so differences come from the text tower only.
+
+\setcounter{table}{12}
+
+% ---------- Table 13 ----------
+\begin{table}[!htbp]
+\centering
+\caption{Tower-swap ablation. Every run uses the CLIMP-paper VMamba-B image tower (frozen; except the last row), new 512-d projection heads, masked-mean text pooling, and identical training: COCO train2017, 3 epochs, 1 GPU, batch 128. COCO = val2017 5K (in-domain, since training is on COCO). All other columns are zero-shot at 224 px; retrieval columns are R@5 \TI{} / \IT{}. DOCCI is at 224 px here (896 px in the previous report).}
+\label{tab:swap}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccccccc}
+\toprule
+ & & & \multicolumn{3}{c}{COCO val2017 5K} & ImageNet-1k & NoCaps & Flickr30k & DOCCI \\
+\cmidrule(lr){4-6}
+Text tower & Params & Text weights & \IT{} R@1 & \TI{} R@1 & Rsum & Acc@1 / Acc@5 & R@5 & R@5 & R@5 \\
+\midrule
+In-house Mamba-1            & 99M  & frozen    & 23.2 & 18.1 & 256.0 & 10.4 / 24.5 & 41.7 / 53.7 & 52.1 / 63.0 & 25.9 / 30.0 \\
+Mamba (public)              & 130M & frozen    & 18.6 & 14.7 & 228.2 & 10.2 / 25.9 & 38.9 / 50.1 & 49.5 / 56.9 & 23.6 / 31.2 \\
+Mamba (public)              & 370M & frozen    & 20.5 & 16.1 & 244.8 & 12.3 / 30.4 & 43.9 / 54.9 & 54.1 / 63.1 & 29.1 / 36.3 \\
+Mamba (public)              & 790M & frozen    & 22.2 & 16.6 & 249.0 & 14.0 / 34.4 & 45.4 / 57.4 & 54.2 / 65.9 & 32.5 / 39.8 \\
+Mamba (public)              & 1.4B & frozen    & 24.4 & 18.6 & 268.1 & 14.5 / 35.0 & 48.3 / 60.8 & 58.1 / 69.1 & 35.8 / 43.5 \\
+Mamba (public)              & 2.8B & frozen    & 24.9 & 18.5 & 268.8 & 14.4 / 35.7 & 49.1 / 61.1 & 58.6 / 69.7 & 35.4 / 44.0 \\
+CLIMP-paper (CC12M-trained) & 1.4B & frozen    & 32.1 & 23.2 & 307.8 & 25.4 / 51.5 & 62.2 / 75.8 & 68.3 / 79.6 & 64.7 / 64.7 \\
+\midrule
+In-house Mamba-1            & 99M  & trainable & 30.8 & 23.8 & 308.3 & 14.1 / 31.7 & 52.1 / 63.7 & 62.8 / 73.7 & 37.2 / 42.3 \\
+Mamba (public)              & 130M & trainable & 31.3 & 24.0 & 309.5 & 16.8 / 38.3 & 54.6 / 66.4 & 66.2 / 75.7 & 40.1 / 47.0 \\
+Mamba (public)              & 370M & trainable & 35.3 & 26.5 & 329.6 & 20.3 / 43.9 & 60.0 / 72.0 & 69.5 / 77.9 & 47.4 / 52.8 \\
+\midrule
+CLIMP-paper text$^{\ddagger}$ & 1.4B & frozen  & 30.8 & 22.5 & 304.1 & 24.1 / 48.4 & 56.1 / 69.1 & 63.6 / 73.3 & 52.8 / 53.6 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\raggedright\footnotesize $^{\ddagger}$ Image-tower check: ImageNet-initialised VMamba-B (trainable) instead of the CLIMP-paper image tower.
+\end{table}
+
+\paragraph{Findings.}
+\begin{itemize}
+  \item The in-house 99M tower is good for its size: frozen, it beats public towers up to 790M on COCO; trainable, it matches the public 130M.
+  \item Frozen, text-tower size helps up to $\approx$1.4B and then saturates (2.8B $\approx$ 1.4B).
+  \item A trainable 370M tower beats a frozen 2.8B tower on every metric.
+  \item The largest gap comes from image--text training data: the same 1.4B architecture trained on CC12M (CLIMP-paper) is +40 Rsum and +11 ImageNet Acc@1 over the public 1.4B.
+\end{itemize}
+
+%=============================================================
+\section{Staged unfreezing}
+%=============================================================
+
+% ---------- Table 14 ----------
+\begin{table}[!htbp]
+\centering
+\caption{Staged unfreezing (same setup as Table~\ref{tab:swap}). Stage 2 starts from the frozen-text run of the same tower and unfreezes the text tower (last $N$ layers, or all). Stage 3 continues from stage 2 and also unfreezes the last 8 VMamba blocks (48.1M of 87.5M parameters). Best value per column in bold.}
+\label{tab:staged}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cllccccccc}
+\toprule
+ & & & \multicolumn{3}{c}{COCO val2017 5K} & ImageNet-1k & NoCaps & Flickr30k & DOCCI \\
+\cmidrule(lr){4-6}
+Stage & Text tower & Trainable & \IT{} R@1 & \TI{} R@1 & Rsum & Acc@1 / Acc@5 & R@5 & R@5 & R@5 \\
+\midrule
+2 & 1.4B & text: last 12 of 48 layers         & 34.5          & 26.9          & 331.3          & \textbf{22.7} / \textbf{48.1} & 60.9 / 72.2 & 69.0 / 78.7 & 49.6 / 53.6 \\
+2 & 2.8B & text: last 8 of 64 layers          & 33.9          & 25.2          & 321.9          & 20.8 / 45.7 & 58.4 / 69.9 & 67.4 / 77.0 & 45.7 / 52.6 \\
+2 & 790M & text: all layers                   & \textbf{38.0} & 27.8          & \textbf{340.1} & 21.9 / 46.3 & \textbf{62.4} / \textbf{74.0} & \textbf{71.5} / \textbf{81.1} & \textbf{53.5} / \textbf{56.9} \\
+\midrule
+3 & 790M & text: all + vision: last 8 blocks  & 37.0          & \textbf{27.9} & 339.6          & 21.9 / 45.9 & 61.7 / 73.0 & 69.8 / 80.1 & 49.2 / 53.9 \\
+3 & 1.4B & text: last 12 + vision: last 8     & 35.4          & 26.7          & 333.5          & 22.1 / 47.2 & 60.4 / 73.2 & 68.4 / 76.7 & 47.2 / 50.1 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\paragraph{Findings.}
+\begin{itemize}
+  \item Training the whole 790M tower beats partially training 1.4B or 2.8B: how much of the tower is trained matters more than its size.
+  \item Also unfreezing the image tower on COCO gives no gain and lowers zero-shot DOCCI by up to 4.3 R@5: COCO-only training has reached its limit.
+\end{itemize}
+
+\clearpage
+%=============================================================
+\section{CC12M training (paper-comparable, no paper weights)}
+%=============================================================
+Same training data as the CLIMP paper (CC12M), ImageNet-initialised image tower as in the paper, and no CLIMP-paper weights anywhere.
+
+% ---------- Table 15 ----------
+\begin{table}[!htbp]
+\centering
+\caption{CC12M pilots: ImageNet-1k-initialised VMamba-B + public Mamba 790M, both fully trainable. 100 CC12M shards ($\approx$503K pairs), 1 epoch, 1 GPU, batch 128. \emph{alt} = original CC12M alt-text (as in the paper); \emph{mix} = uniform choice among alt-text, LLaVA-NeXT short and LLaVA-NeXT long recaptions (max 160 tokens). All columns are zero-shot at 224 px, including COCO (no COCO data in training). The last row is the released CLIMP-paper checkpoint under our evaluation.}
+\label{tab:cc12m-pilot}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+ & & \multicolumn{3}{c}{COCO val2017 5K} & ImageNet-1k & NoCaps & Flickr30k & DOCCI \\
+\cmidrule(lr){3-5}
+Run & Pairs seen & \IT{} R@1 & \TI{} R@1 & Rsum & Acc@1 / Acc@5 & R@5 & R@5 & R@5 \\
+\midrule
+Pilot, alt-text          & 0.5M          & 19.9          & 14.1          & 213.4          & 33.3 / 63.2 & 52.4 / 64.6 & 58.7 / 68.5 & 49.5 / 54.3 \\
+Pilot, mixed captions    & 0.5M          & 24.4          & 18.0          & 249.1          & 31.4 / 60.7 & 61.0 / 72.3 & 63.7 / 72.8 & \textbf{70.6} / \textbf{72.3} \\
+\midrule
+CLIMP pt (our eval)      & $\approx$110M & \textbf{34.6} & \textbf{24.0} & \textbf{304.3} & \textbf{43.8} / \textbf{74.7} & \textbf{70.6} / \textbf{82.3} & \textbf{76.2} / \textbf{86.9} & 66.4$^{\dagger}$ / 50.0$^{\dagger}$ \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\raggedright\footnotesize $^{\dagger}$ At 896 px (previous report, Table 11); not evaluated at 224 px.
+\end{table}
+
+\paragraph{Findings.}
+\begin{itemize}
+  \item 0.5M CC12M pairs already give ImageNet 33.3 Acc@1, versus 15.3 after 10 epochs on 1.2M COCO pairs.
+  \item Mixed captions add +36 COCO Rsum, +8.6 NoCaps and +21 DOCCI R@5 for $-1.9$ ImageNet Acc@1, and already beat the paper checkpoint on DOCCI. Mixed captions were chosen for the full run.
+\end{itemize}
+
+% ---------- Table 16 ----------
+\begin{table}[!htbp]
+\centering
+\caption{Full CC12M run (job 7540): configuration and status.}
+\label{tab:cc12m-full}
+\begin{tabular}{l>{\raggedright\arraybackslash}p{11cm}}
+\toprule
+Setting & Value \\
+\midrule
+Data     & CC12M, all 2,176 shards (10.97M pairs, 1.1 TB), mixed captions, max 160 tokens \\
+Model    & ImageNet-initialised VMamba-B + public Mamba 790M, both fully trainable \\
+Schedule & 3 epochs, 2$\times$L40S, global batch 256 ($\approx$33M pairs, $\approx$4.5 days) \\
+Status   & Queued, 0 steps completed: cluster GPU nodes down since 9 Nov 2026 \\
+Results  & \tbd \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

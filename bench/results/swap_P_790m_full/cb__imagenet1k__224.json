@@ -1,0 +1,10 @@
+{
+ "acc1": 0.2187,
+ "acc5": 0.46254,
+ "mean_per_class_recall": 0.21902,
+ "model": "swap {'vis': 'paper', 'txt': 'hf:ckpt/hf/mamba-790m-hf', 'train_vis': 0, 'train_txt': -1, 'embed_dim': 512}",
+ "task": "cb",
+ "dataset": "imagenet1k",
+ "res": 224,
+ "seconds": 162.0
+}
